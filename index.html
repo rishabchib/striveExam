@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Render JSON as HTML Table</title>
+  <script type="module">
+    // Import json2html.js from the same repository
+    import json2html from './json2html.js';
+    
+    // Example data array
+    const data = [
+      { Name: "Alice", Age: 25 },
+      { Name: "Bob", Age: 30 },
+      { Name: "Charlie", Age: 35, Gender: "M" }
+    ];
+    
+    // Insert the generated table HTML into the page's body
+    document.addEventListener('DOMContentLoaded', () => {
+      document.body.innerHTML = json2html(data);
+    });
+  </script>
+</head>
+<body>
+  <h1>Rendered Table from JSON</h1>
+  <!-- The table will be dynamically inserted here -->
+</body>
+</html>
